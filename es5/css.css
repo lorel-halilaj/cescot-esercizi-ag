@@ -1,12 +1,14 @@
 /* Regole CSS base */
 
 body {
+    background-color: #eee;
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 p {
     color: #f9f9f9;
-    background-color: #333333;
+    background-color: #333;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em; /* moltiplica la dimensione per la regola precedente e quindi: 16 del body per 1.5 */
     text-align: left; /* left | center | right | justify */
@@ -18,4 +20,24 @@ p span {
     font-style: italic; /* normal | italic */
     text-decoration: underline; /* none | underline | line-through + colore se si vuole colorare la decorazione*/
     text-transform: uppercase; /* none | capitalize | lowercase | uppercase */
+}
+
+ul {
+    list-style-type: none;
+}
+
+div#spazio {
+    background-color: #c38fd5;
+    margin: 24px; /* margin-top | -right | -bottom | -left */
+    padding: 24px;
+    border: solid #333 2px; /* border-style | -width | -color; lo stile del bordo è obbligatorio */
+    border-radius: 12px;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin: 0;
 }
