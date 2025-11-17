@@ -1,0 +1,17 @@
+/* Regole CSS base */
+
+body {
+    font-size: 16px;
+}
+
+p {
+    color: #f9f9f9;
+    background-color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em; /* moltiplica la dimensione per la regola precedente e quindi: 16 del body per 1.5 */
+    font-weight: 400;
+}
+
+p span {
+    font-size: 1.5rem; /* moltiplica la dimensione per la regola "base", quindi non quella precedente, usato soprattutto per il responsive */
+}
