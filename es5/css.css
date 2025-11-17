@@ -9,9 +9,13 @@ p {
     background-color: #333333;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em; /* moltiplica la dimensione per la regola precedente e quindi: 16 del body per 1.5 */
-    font-weight: 400;
+    text-align: left; /* left | center | right | justify */
 }
 
 p span {
-    font-size: 1.5rem; /* moltiplica la dimensione per la regola "base", quindi non quella precedente, usato soprattutto per il responsive */
+    font-size: 1.5rem; /* moltiplica la dimensione per la regola "base" (non direttamente quella precedente), quindi non quella precedente, usato soprattutto per il responsive */
+    font-weight: bold; /* normal | bold | 100 ... 900 */
+    font-style: italic; /* normal | italic */
+    text-decoration: underline; /* none | underline | line-through + colore se si vuole colorare la decorazione*/
+    text-transform: uppercase; /* none | capitalize | lowercase | uppercase */
 }
