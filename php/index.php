@@ -59,11 +59,60 @@
     } else {
         echo "Utente non diciottenne";
     };
+    echo "<br>";
 
     // Uguaglianza stretta, controlla valore e tipo
     if ($array_3["eta"] == 21) {} // Questa condizione è VERA!
     if ($array_3["eta"] == "21") {} // Questa condizione è VERA!
     if ($array_3["eta"] === 21) {} // Questa condizione è VERA!
     if ($array_3["eta"] === "21") {} // Questa condizione è FALSA! perchè in questo caso gli ho chiesto se è una stringa
+
+    /** Operatori logici
+     * 
+     * AND  -> and oppure &&
+     * OR   -> or oppure ||
+     * XOR  -> xor
+     * NOT  -> ! 
+     * 
+     */
+
+    // Sintassi alternativa
+    if (true and false): // (true && false)
+        echo "Condizione vera";
+    else:
+        echo "Condizione falsa";
+    endif;
+    // Stampa Falso
+    echo "<br>";
+
+    if (true or false): // (true || false)
+        echo "Condizione vera";
+    else:
+        echo "Condizione falsa";
+    endif;
+    // Stampa Vero
+    echo "<br>";
+
+    $persona_1 = array(
+        "nome" => "Luca",
+        "cognome" => "Rossi",
+        "telefono" => ""
+    );
+
+    $persona_2 = array (
+        "nome" => "Lorenza",
+        "cognome" => "Verdi",
+        "telefono" => "+39 321654987"
+    );
+
+    if ($persona_1["telefono"] != ""):
+        echo "Tel:";
+        echo $persona_1["telefono"];
+    endif;
+
+    // Se la prima condizione è FALSA non valuto nemmeno la seconda, dato che il risultato è comunque FALSO
+    if (array_key_exists("telefono", $persona_2) && $persona_2["telefono"] != ""):
+        echo "Tel:" . $persona_2["telefono"]; // Concatenazione per unire più stringhe
+    endif;
 
 ?>
