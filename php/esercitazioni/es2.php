@@ -110,6 +110,48 @@ $persone = [
                 ?>
             </ul>
         <p>
-            La media dell'età di tutte le persone è: <?php ( $anni / count($persone) ); ?>
+            La media dell'età di tutte le persone è: <?php echo ( $anni / count($persone) ); ?>
         </p>
     </div>
+
+<?php 
+
+/**
+ * Esercizio 4
+ * 
+ * Data l'età di una persona, ritorna se può guidare il 125 (16 anni)
+ */
+
+function guida_125($eta) {
+    if ($eta >= 16)
+        return true;
+    
+    return false;
+};
+
+
+/**
+ * Esercizio 5
+ * 
+ * Dato un numero verifica se è divisibile per 3
+ * ($numero % 3 == 0) // Il resto della divisione tra numero e 3 è uguale a 0
+ */
+
+function divisibile_3($numero) {
+    return $numero % 3 == 0;
+};
+
+/**
+ * Esercizio 6
+ * 
+ * Dato un numero, ritornal in formato EURO (€ 10.00)
+ */
+
+function number_to_euro($numero) {
+    return "€ " . number_format($numero, 2, ".", "");
+}
+
+echo number_to_euro(1584.22);
+
+
+?>
