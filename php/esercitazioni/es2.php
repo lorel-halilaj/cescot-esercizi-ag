@@ -66,44 +66,50 @@ endwhile
 
 $persone = [
     array(
-        "nome" = "Mario",
-        "eta" = 15
+        "nome" => "Mario",
+        "eta" => 15
     ),
     array(
-        "nome" = "Lucia",
-        "eta" = 18
+        "nome" => "Lucia",
+        "eta" => 18
     ),
     array(
-        "nome" = "Luigi",
-        "eta" = 19
+        "nome" => "Luigi",
+        "eta" => 19
     ),
     array(
-        "nome" = "Francesco",
-        "eta" = 16
+        "nome" => "Francesco",
+        "eta" => 16
     ),
     array(
-        "nome" = "Claudia",
-        "eta" = 25
+        "nome" => "Claudia",
+        "eta" => 25
     ),
     array(
-        "nome" = "Gianni",
-        "eta" = 21
+        "nome" => "Gianni",
+        "eta" => 21
     )
     ];
 
-    $outputMaggiorenni = "",
-
-    for ($i = 0; $i < count($persone["eta"]); $i++) :
-        if ($persone["eta" >= 18]) :
-        $outputMaggiorenni .= $persone["nome"] . " ";
+    $anni = 0;
 ?>
 
     <div>
         <h2>Esercizio 03</h2>
         <p>
             Le persone maggiorenni sono<br>
-            <strong><?php echo $outputMaggiorenni; ?></strong>
+        </p>
+            <ul>
+                <?php
+                    foreach ($persone as $persona) :
+                        if ($persona["eta"] >= 18) :
+                            echo "<li>".$persona["nome"]."</li>";
+                        endif;
+                        $anni += $persona["eta"];
+                    endforeach;
+                ?>
+            </ul>
+        <p>
+            La media dell'età di tutte le persone è: <?php  ?>
         </p>
     </div>
-
-<?php
