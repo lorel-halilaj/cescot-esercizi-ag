@@ -115,4 +115,74 @@
         echo "Tel:" . $persona_2["telefono"]; // Concatenazione per unire più stringhe
     endif;
 
-?>
+    // Creare un ciclo
+    // Ciclo for
+    $voti = [0, 6, 7, 7.5, 4, 8, 9, 10];
+    $somma = 0;
+    $num_voti = 0;
+
+    for ($i = 0; $i < count($voti); $i++) :
+        if ($voti[$i] > 0 && $voti[$i] <= 10) :
+            $somma = $somma + $voti[$i];
+            $num_voti ++;
+        endif;
+    endfor;
+    
+    echo "<br>La somma dei voti è " . $somma;
+    echo "<br>Il numero dei voti è " . count($voti);
+    echo "<br>Il numero dei voti validi è " . $num_voti;
+
+    $media = $somma / $num_voti;
+
+    echo "<br>La media dei voti è " . $media;
+
+    // Ciclo while, va avanti finche la condizione non è vera (ciclo infinito)
+    $numero = 45;
+    $valori = [1, 3, 6, 87, 23, 5, 45, 17, 89, 12, 34];
+
+    $trovato = false;
+
+    $i = 0;
+    while (!$trovato && $i < count($valori)) : // condizione di uscita certa
+        if ($valori[$i] == $numero) :
+            $trovato = true;
+        endif;
+        $i++;
+    endwhile;
+
+    echo "<br>";
+
+    /**
+     * Ciclo FOR equivalente
+     *   for ($i = 0; !$trovato && $i < count($valori); $i++) :
+     *       if ($valori[$i] == $numero) :
+     *       $trovato = true;
+     *       break;    // Break interrompe il ciclo più vicino
+     *       endif;
+     *   endfor;
+    **/
+
+    if ($trovato) :
+        echo $numero . " è presente nell'array<br>";
+    else :
+        echo $numero . " non è presente nell'array<br>"; 
+    endif;
+    
+    /**
+     * Ciclo inverso: prima dai le istruzioi, poi valuta la condizione
+     * 
+     * do {
+     * } while
+     */
+
+    // Operatori di incremento e decremento
+    $i = 1;
+    echo $i++; // Stampa il valore i (1) e poi lo incrementa (2)
+    echo "<br>";
+    echo ++$i; // Prima incrementa il valore i (3) e poi lo stampa (3)
+    echo "<br>";
+    echo $i--;
+    echo "<br>";
+    echo --$i;
+
+    ?>                                                       
