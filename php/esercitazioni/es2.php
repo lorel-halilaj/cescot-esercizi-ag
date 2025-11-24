@@ -110,6 +110,6 @@ $persone = [
                 ?>
             </ul>
         <p>
-            La media dell'età di tutte le persone è: <?php  ?>
+            La media dell'età di tutte le persone è: <?php ( $anni / count($persone) ); ?>
         </p>
     </div>
