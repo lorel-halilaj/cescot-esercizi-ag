@@ -187,7 +187,7 @@ lista.innerHTML= "<li>1</li><li class='figlio'>2</li>";
 console.log(lista.getElementsByClassName("figlio")); // 1 figlio
 
 // Inserisci testo semplice nell'elemento
-lista.innerText= "<li>1</li><li class='figlio'>2</li>";
+// lista.innerText= "<li>1</li><li class='figlio'>2</li>";
 console.log(lista.getElementsByClassName("figlio")); // 0 figli
 
 /* for - calcolare la media */
@@ -235,3 +235,23 @@ for (valore of array) {
 for (chiave in oggetto) {
     console.log(oggetto[chiave]);
 }
+
+// Event listener (ascoltatore di eventi)
+var clickMeButton = document.getElementById("click-me-button");
+
+clickMeButton.addEventListener('mouseenter', function() {
+    clickMeButton.style.top = Math.random() * 100 + "%";
+    clickMeButton.style.left = Math.random() * 100 + "%";
+});
+
+var showPasswordBtn = document.getElementById("show-password");
+showPasswordBtn.addEventListener('click', function() {
+
+    if (passwordInput.getAttribute("type") == "password") {
+        passwordInput.setAttribute("type", "text");
+        showPasswordBtn.innerText = "Nascondi la password";
+    } else {
+        passwordInput.setAttribute("type", "text");
+        showPasswordBtn.innerText = "Mostra la password";
+    }
+})

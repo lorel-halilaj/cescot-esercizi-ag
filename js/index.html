@@ -11,15 +11,54 @@
     <p id="elemento-1" class="elementi">
         Ciao mondo!
     </p>
-
     <ul id="genitore">
         <li class="figlio">2</li>
         <li class="figlio">3</li>
         <li>4</li>
         <li class="figlio">2</li>
     </ul>
-
     <p class="figlio">Figlio esterno</p>
+    <div class="form">
+        <form action="#" method="post">
+            <input type="text" placeholder="Segnaposto" value="Valore già inserito" required><br>
+            <label for="email">Email: </label>
+            <input type="email" placeholder="es. prova@email.com"><br>
+
+            <input id="password" type="password" placeholder="Password"><br>
+            <button id="show-password">
+                Mostra la password
+            </button><br>
+
+            <input type="tel" placeholder="es. 333 123 4567"><br>
+            <input type="number" placeholder="es. 3"><br>
+            <input type="date"><br>
+            <input type="time"><br>
+            <input type="file"><br>
+
+            <p>Sei maggiorenne?</p>
+            <input type="radio" name="radio-1" value="val-1" id="radio-1-1"> 
+            <label for="radio-1-1">Sì</label><br>
+            <input type="radio" name="radio-1" value="val-2" id="radio-1-2"> 
+            <label for="radio-1-2">No</label><br>
+
+            <input type="checkbox" id="privacy"> 
+            <label for="privacy">Ho letto e accetto i termini e le condizioni </label><br>
+            <select>
+                <optgroup>
+                    <option value="val-1">Valore 1</option>
+                </optgroup>
+                <optgroup>
+                    <option value="val-1">Valore 2</option>
+                </optgroup>
+            </select> 
+            <br>
+            <textarea name="" id=""></textarea><br>
+            <button type="submit">Invia <br>il modulo</button>
+            <input type="submit" value="Invia<br> il modulo"><br>
+            <button type="reset">Resetta</button>
+        </form>
+    </div>
+    <button id="click-me-button">Cliccami</button>
     <script src="script.js"></script>
 </body>
 </html>
