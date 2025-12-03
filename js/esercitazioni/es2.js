@@ -26,3 +26,37 @@ function esercizio2() {
     document.getElementById('es2-numeroUtente').innerText = "Il numero inserito è " + numeroUtente;
     document.getElementById('es2-risultato').innerText = "Il fattoriale del numero è " + risultato;
 }
+
+function esercizio3() {
+
+    let studente = {
+        nome: "",
+        cognome: "",
+        matricola: "",
+        voti: []
+    }
+
+    // Input
+    for (chiave in studente) {
+        if (chiave != "voti") {
+            studente[chiave] = window.prompt("Inserire " + chiave);
+        } else {
+            let stringaVoti = window.prompt("Inserire i voti separati da ','");
+            studente[chiave] = stringaVoti.split(",");
+        }
+    }
+    // Media
+    let mediaVoti = 0;
+    for (voto of studente.voti) {
+        mediaVoti += parseInt(voto);
+    }
+    studente.mediaVoti = mediaVoti / studente.voti.length;
+
+    // Stampa
+    let risultato = "";
+    for (chiave in studente) {
+        if (chiave != "voti")
+        risultato += chiave + ": " + studente[chiave] + "<br>";
+    }
+    document.getElementById("es3-risultato").innerHTML = risultato;
+}
