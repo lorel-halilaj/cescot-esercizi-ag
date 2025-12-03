@@ -201,12 +201,12 @@ console.log("Media =" + (somma / voti.length));
 /* while */
 var numero = window.prompt("Inserisci un numero");
 
-var element = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+var elementi = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 let i = 0;
 let trovato = false;
 
-while (!trovato && i < element.length) {
+while (!trovato && i < elementi.length) {
     if (numero == elementi[i]) {
         trovato = true;
     }
@@ -217,4 +217,21 @@ if (trovato) {
     console.log("Elemento trovato");
 } else {
     console.log("Elemento non trovato")
+}
+
+var array = [1, 2, 3, 4, 5];
+var oggetto = {
+    nome: "Luca",
+    cognome: "Rossi",
+    chiave: "chiave!"
+};
+
+// Ciclo for of
+for (valore of array) {
+    console.log(valore);
+}
+
+// Ciclo for in
+for (chiave in oggetto) {
+    console.log(oggetto[chiave]);
 }
