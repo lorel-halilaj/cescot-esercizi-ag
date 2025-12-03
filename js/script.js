@@ -189,3 +189,32 @@ console.log(lista.getElementsByClassName("figlio")); // 1 figlio
 // Inserisci testo semplice nell'elemento
 lista.innerText= "<li>1</li><li class='figlio'>2</li>";
 console.log(lista.getElementsByClassName("figlio")); // 0 figli
+
+/* for - calcolare la media */
+var voti = [4, 6, 7, 8, 6, 8];
+var somma = 0;
+for (let i = 0; i < voti.length; i++) {
+    somma += voti[i];
+}
+console.log("Media =" + (somma / voti.length));
+
+/* while */
+var numero = window.prompt("Inserisci un numero");
+
+var element = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+let i = 0;
+let trovato = false;
+
+while (!trovato && i < ElementInternals.length) {
+    if (numero == elementi[i]) {
+        trovato = true;
+    }
+    i++;
+}
+
+if (trovato) {
+    console.log("Elemento trovato");
+} else {
+    console.log("Elemento non trovato")
+}
