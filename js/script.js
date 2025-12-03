@@ -206,7 +206,7 @@ var element = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let i = 0;
 let trovato = false;
 
-while (!trovato && i < ElementInternals.length) {
+while (!trovato && i < element.length) {
     if (numero == elementi[i]) {
         trovato = true;
     }
