@@ -1,6 +1,11 @@
 function esercizio1() {
-    let numeroUtente = window.prompt("Indovina il numero da 1 a 10");
-    let numeroFortunato = 6;
+    let numeroUtente = window.prompt("Indovina il numero da 0 a 10");
+    /* Per generare un numero casuale */
+    /**
+     * Math.random genra un numero decimale da 0 a 1, quindi bisogna transformare questo range 
+     * Math.ceil arrotonda il numero, togliendo il decimale
+     **/
+    let numeroFortunato = Math.ceil(Math.random() * 10);
 
     while (numeroUtente != numeroFortunato) {
         numeroUtente = window.prompt("Sbagliato, riprova!")
@@ -10,3 +15,14 @@ function esercizio1() {
     document.getElementById('es1-risultato').innerText = "Congratulazioni! Hai indovinato il numero fortunato";
 }
 
+function esercizio2() {
+    let numeroUtente = window.prompt("Inserisci un numero da 1 a 10");
+    let risultato = 1
+    
+    for (let i = 1; i <= numeroUtente; i++) {
+        risultato *= i;
+    } 
+
+    document.getElementById('es2-numeroUtente').innerText = "Il numero inserito è " + numeroUtente;
+    document.getElementById('es2-risultato').innerText = "Il fattoriale del numero è " + risultato;
+}
